@@ -1,0 +1,274 @@
+@import 'sphinx-book-theme.css';
+
+:root {
+  --spt-font-body: 'Poppins';
+  --spt-font-headings: 'Poppins';
+  --spt-font-footnote: 'Cormorant';
+
+  --spt-color-gray-100: 248, 249, 250;
+  --spt-color-gray-200: 233, 236, 239;
+  --spt-color-gray-300: 222, 226, 230;
+  --spt-color-gray-400: 206, 212, 218;
+  --spt-color-gray-500: 173, 181, 189;
+  --spt-color-gray-600: 108, 117, 125;
+  --spt-color-gray-700: 73, 80, 87;
+  --spt-color-gray-800: 52, 58, 64;
+  --spt-color-gray-900: 33, 37, 41;
+  --spt-color-light: var(--spt-color-gray-100);
+  --spt-color-dark: var(--spt-color-gray-800);
+  --spt-color-green: 0, 121, 124;
+  --spt-color-green-lighter: 20, 141, 144;
+  --spt-color-green-lightest: 130, 231, 234;
+  --spt-color-blue: 26, 101, 143;
+  --spt-color-blue-lighter: 46, 121, 163;
+  --spt-color-blue-lightest: 156, 191, 213;
+  --spt-color-deep-blue: 1, 33, 105;
+  --spt-color-green-highlight: 168, 199, 0;
+
+  --pst-color-primary: var(--spt-color-blue);
+  --pst-color-primary-hover: var(--spt-color-blue-lighter);
+  --pst-color-link: var(--pst-color-primary);
+  --pst-color-link-hover: var(--pst-color-primary);
+  --pst-color-headerlink: var(--spt-color-gray-500);
+  --pst-color-headerlink-hover: var(--spt-color-gray-500);
+
+  --tabs-size-label: 0.8rem !important;
+  --tabs-color-label-active: rgba(var(--pst-color-primary), 1) !important;
+  --tabs-color-label-inactive: rgba(var(--spt-color-blue-lightest), 1) !important;
+}
+
+$document-width: calc(0.5 * (var(--breakpoint-md) + var(--breakpoint-lg)));
+
+@import "general";
+@import "bootstrap4";
+@import "fontawesome";
+@import "sphinx-basic-theme";
+@import "pydata-sphinx-theme";
+@import "sphinx-book-theme";
+@import "myst";
+@import "sphinx-panels";
+@import "sphinx-thebe";
+
+// ===========================================================================
+// GeoCAT THEME ==============================================================
+// ===========================================================================
+
+// HEADER --------------------------------------------------------------------
+
+#shim {
+  padding: 0;
+  margin-top: var(--pst-header-height);
+}
+
+#navbar-main {
+  z-index: 5000;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .container-xl {
+    padding: 0;
+  }
+}
+
+#navbar-icon-links i:before {
+  color: var(--spt-color-light) !important;
+}
+
+// STANDALONE LAYOUT ---------------------------------------------------------
+
+main.standalone-main {
+  padding: 0 !important;
+  background-color: white;
+
+  div.sectionwrapper-1,
+  div.sectionwrapper-2 {
+    color: rgba(var(--spt-color-dark), 1);
+  }
+
+  div.section-1,
+  div.section-2 {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: $document-width;
+
+    h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+      padding: 1rem 0;
+    }
+  }
+
+  div.section-title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  div.section-title {
+    padding: 0 4rem 0.1rem 0;
+    margin: 0 0 1.6rem 0;
+    border-bottom: 2px solid rgba( var(--spt-color-deep-blue), 1);
+  }
+}
+
+// BANNER LAYOUT -------------------------------------------------------------
+
+main.banner-main {
+  padding: 0 !important;
+
+  #main-content {
+    padding: 0 !important;
+  }
+
+  div.sectionwrapper-1 {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    color: rgba(var(--spt-color-light), 1);
+    background-color: rgba(var(--spt-color-gray-700), 1);
+
+    div.section-banner-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      padding-right: 0.5rem;
+    }
+  }
+
+  div.sectionwrapper-2 {
+    color: rgba(var(--spt-color-dark), 1);
+    background-color: rgba(var(--spt-color-light), 1);
+  }
+
+  div.sectionwrapper-2:nth-child(even) {
+    background-color: rgba(var(--spt-color-gray-300), 1);
+  }
+
+  div.section-1,
+  div.section-2 {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: $document-width;
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+    }
+  }
+
+  div.section-title-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  div.section-title {
+    padding: 0 4rem 1rem 4rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(var(--spt-color-deep-blue), 1);
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  div.section.dark-banner {
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--spt-color-light) !important;
+    }
+    p {
+      color: var(--spt-color-light) !important;
+    }
+  }
+}
+
+// FOOTER --------------------------------------------------------------------
+
+.footer {
+  color: rgba(var(--spt-color-light), 1);
+  font-size: 0.8rem;
+  font-family: var(--spt-font-footnote);
+  padding: 0;
+
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: rgba(var(--spt-color-light), 1);
+    font-family: var(--spt-font-footnote);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .footer-logos {
+    background-color: rgba(var(--spt-color-gray-200), 1);
+  }
+
+  .footer-info,
+  .footer-menu {
+    color: rgba(var(--spt-color-gray-400), 1);
+    background-color: rgba(var(--spt-color-dark), 1);
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+
+    li {
+      line-height: 1rem;
+      margin-bottom: 5px;
+    }
+  }
+
+  .footer-extra {
+    background-color: rgba(var(--spt-color-gray-700), 1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    img {
+      height: 60px;
+    }
+  }
+}
+
+// IFRAME ELEMENTS ------------------------------------------------------------
+
+.iframe {
+  position: relative;
+  height: 0;
+  width: 75%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  iframe {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iframe-16x9 {
+  @extend .iframe;
+  padding-bottom: calc(0.75 * 56.25%);
+}
+
+.iframe-4x3 {
+  @extend .iframe;
+  padding-bottom: calc(0.75 * 75%);
+}

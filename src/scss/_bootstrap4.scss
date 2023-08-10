@@ -1,0 +1,114 @@
+.admonition.alert-info,
+div.admonition.alert-info {
+  border-color: #0c5460 !important;
+  .admonition-title::before {
+    color: #0c5460 !important;
+  }
+}
+
+.admonition.alert-success,
+div.admonition.alert-success {
+  border-color: #155724 !important;
+  .admonition-title::before {
+    color: #155724 !important;
+  }
+}
+
+.admonition.alert-warning,
+div.admonition.alert-warning {
+  border-color: #856404 !important;
+  .admonition-title::before {
+    color: #856404 !important;
+  }
+}
+
+.admonition.alert-danger,
+div.admonition.alert-danger {
+  border-color: #721c24 !important;
+  .admonition-title::before {
+    color: #721c24 !important;
+  }
+}
+
+.bg-primary {
+  background-color: rgba(var(--pst-color-primary), 1) !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: rgba(var(--pst-color-primary), 1) !important;
+  border-color: rgba(var(--pst-color-primary), 1) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: rgba(var(--pst-color-primary-hover), 1) !important;
+  color: white !important;
+}
+
+.btn-outline-primary {
+  border-color: rgba(var(--pst-color-primary), 1) !important;
+  color: rgba(var(--pst-color-primary), 1) !important;
+}
+
+.btn-outline-primary:hover,
+.show>.btn-outline-primary.dropdown-toggle {
+  background-color: rgba(var(--pst-color-primary), 1) !important;
+  color: white !important;
+}
+
+.btn-link {
+  color: rgba(var(--pst-color-primary), 1) !important;
+}
+
+.display-1 {
+  font-size: 5rem !important;
+}
+
+.display-2 {
+  font-size: 3rem !important;
+}
+
+.display-3 {
+  font-size: 2rem !important;
+}
+
+.display-4 {
+  font-size: 1.6667rem !important;
+}
+
+.display-5 {
+  font-size: 1.3333rem !important;
+}
+
+.display-6 {
+  font-size: 1rem !important;
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand {
+  padding: .75rem 0 !important;
+}
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+a.badge {
+  text-decoration: none !important;
+}
+
+a.navbar-brand img {
+  vertical-align: middle !important;
+}
+
+body>div.container-fluid,
+body>div.container-xl {
+  padding-right: 0;
+  padding-left: 0;
+}

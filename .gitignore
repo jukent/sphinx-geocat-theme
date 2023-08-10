@@ -1,0 +1,8 @@
+.vscode
+dist/
+/build
+_build
+__pycache__
+*.egg-info
+/docs/reference
+/book/reference

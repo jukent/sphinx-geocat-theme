@@ -1,0 +1,95 @@
+#######################################################################################
+# Book settings
+title: ""
+logo: images/dummy_logo_dark.svg
+author: the GeoCAT team
+copyright: "2022"
+email: kpaul@ucar.edu
+description: >- # this means to ignore newlines
+  This is an example book built with Jupyter Books.
+
+execute:
+  execute_notebooks: cache
+
+html:
+  favicon: images/favicon.ico
+  home_page_in_navbar: false
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  use_download_button: true
+  baseurl: https://geocat.ucar.edu/
+
+repository:
+  url: https://github.com/jukent/sphinx-geocat-theme
+  branch: main
+  path_to_book: docs
+
+launch_buttons:
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+parse:
+  myst_substitutions:
+    sub3: My _global_ value!
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
+bibtex_bibfiles:
+  - reference/references.bib
+
+sphinx:
+  config:
+    html_theme: sphinx_geocat_theme
+    html_theme_options:
+      github_url: https://github.com/jukent/sphinx-geocat-theme
+      repository_url: https://github.com/jukent/sphinx-geocat-theme
+      extra_navbar: Theme by <a href="https://geocat.ucar.edu/">GeoCAT</a>
+      navbar_links:
+        - name: Documentation
+          url: 'index#documentation'
+        - name: GitHub
+          url: https://github.com/jukent/sphinx-geocat-theme
+          external: True
+      page_layouts:
+        index: page-banner.html
+        standalone: page-standalone.html
+      footer_logos:
+        NCAR: images/NCAR-contemp-logo-blue.svg
+      footer_menu:
+        - title: "More about..."
+          items:
+            - name: GeoCAT
+              url: https://geocat.ucar.edu/
+        - title: "Let us know..."
+          items:.
+            - name: Feature Request
+              url: https://docs.google.com/forms/d/e/1FAIpQLSeWuogl8Z671et3DdrmglenBPKGFmHVHkpSamTQeoPGuytLZw/viewform
+    html_sidebars:
+      index: []
+      standalone: []
+    blog_path: reference/blog
+    blog_post_pattern: "reference/blog/*.md"
+    blog_baseurl: "https://sphinx-geocat-theme.readthedocs.io"
+    fontawesome_included: True
+    post_auto_image: 1
+    post_auto_excerpt: 2
+
+  extra_extensions:
+    - ablog
+    - sphinx_click.ext
+    - sphinx_inline_tabs
+    - sphinx.ext.autodoc
+    - sphinx.ext.intersphinx
+    - sphinxcontrib.bibtex

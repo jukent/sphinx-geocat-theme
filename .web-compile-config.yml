@@ -1,0 +1,10 @@
+web-compile:
+  sass:
+    files:
+      src/scss/sphinx-geocat-theme.scss: sphinx_geocat_theme/static/sphinx-geocat-theme.min.css
+    precision: 5
+    sourcemap: false
+    format: compressed
+  js:
+    files:
+      src/js/sphinx-geocat-theme.js: sphinx_geocat_theme/static/sphinx-geocat-theme.min.js
